@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Pribadi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pemutar Musik -->
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio tag.
+    </audio>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="background.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video tag.
+    </video>
+
+    <!-- Halaman Utama -->
+    <div class="page" id="home">
+        <header>
+            <h1>Selamat Datang di Website Pribadi Saya</h1>
+            <p>Hanya Pelajar Biasa</p>
+            <div class="circle-photo">
+                <img src="home-photo.jpg" alt="Foto Profil">
+            </div>
+            <nav>
+                <button onclick="navigateTo('about')">About</button>
+                <button onclick="navigateTo('blog')">Blog</button>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Halaman About -->
+    <div class="page hidden" id="about">
+        <header>
+            <h2>Tentang Saya</h2>
+            <div class="circle-photo">
+                <img src="about-photo.jpg" alt="Foto About">
+            </div>
+            <p>Halo, saya seorang pelajar yang ingin mengenal lebih dalam tentang teknologi.</p>
+            <button onclick="navigateTo('home')">Kembali ke Home</button>
+        </header>
+    </div>
+
+    <!-- Halaman Blog -->
+    <div class="page hidden" id="blog">
+        <header>
+            <h2>Blog</h2>
+            <nav>
+                <button onclick="showBlogDetail('blog1')">Who I Am</button>
+                <button onclick="showBlogDetail('blog2')">my goal</button>
+            </nav>
+        </header>
+        <button onclick="navigateTo('home')">Kembali ke Home</button>
+    </div>
+
+    <!-- Halaman Detail Blog 1 -->
+    <div class="page hidden" id="blog1">
+        <header>
+            <h2>Who I Am</h2>
+            <div class="circle-photo">
+                <img src="blog1-photo.jpg" alt="Foto Blog 1">
+            </div>
+            <p>Saya seorang pelajar yang duduk dibangku SMP (Sekolah Menengah Pertama) yang berfokus pada teknik informatika seperti Pemrograman, Struktur data dan algoritma, Jaringan komputer.</p>
+        </header>
+        <button onclick="navigateTo('blog')">Kembali ke Blog</button>
+    </div>
+
+    <!-- Halaman Detail Blog 2 -->
+    <div class="page hidden" id="blog2">
+        <header>
+            <h2>My Goal?</h2>
+            <div class="circle-photo">
+                <img src="blog2-photo.jpg" alt="Foto Blog 2">
+            </div>
+            <p>cita cita saya ingin sekolah ke Universitas Brawijaya Malang, dan Mengambil jurusan teknik informatika serta bekerja di perusahaan dan membanggakan orang tua.</p>
+        </header>
+        <button onclick="navigateTo('blog')">Kembali ke Blog</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
